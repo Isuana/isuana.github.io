@@ -90,5 +90,11 @@ margin: 20px;
 }
 
 @media (max-height: 460px) {
-  .left-image { display: none; }
+  .left-image {
+    background-image: url('../images/icon.png');
+    background-size: 120px;
+    background-repeat: no-repeat;
+    background-color: rgb(41, 16, 105);
+    min-height: 120px;
+   }
 }
