@@ -7,22 +7,27 @@ html {
   overflow-x: hidden;
 }
 
+p {
+  padding: 15px;
+  text-align: center;
+}
+
 a {
   color: rgba(240, 204, 46, 0.877);
   text-decoration: none;
 }
 
 .main {
+  padding: 50px 0 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
   background-color: rgb(226, 225, 226);
   font-family: 'Roboto', sans-serif;
+  flex-direction: column;
 }
 
 .box {
   display: flex;
-  height: 600px;
   width: 80%;
   max-width: 1024px;
 }
@@ -36,7 +41,7 @@ a {
   background-image: url('../images/image-page.jpg');
   background-size: cover;
   background-position: left;
-  min-height: 325px;
+  min-height: 600px;
 }
 
 .right-text {
@@ -54,47 +59,107 @@ a {
   border-radius: 5px;
 }
 
-.paragraph {
-  text-align: center;
-  margin: 50px 0 50px;
-}
-
 .icons {
-font-size: 40px;
-
+  font-size: 40px;
 }
 
 .icon {
-margin: 20px;
-}
-
-.hover {
-  transition: 1s ease-in-out;
+  margin: 20px;
+  transition: 0.5s ease-in-out;
   cursor: crosshair;
 }
 
-.hover:hover {
+.icon:hover {
   transform: scale(1.5);
 }
 
+.arrows {
+  padding: 60px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+}
+
+.arrow {
+  color: rgba(41, 16, 105, 0.5);
+  font-size: 100px;
+}
+
+.information {
+  background-color: rgb(41, 16, 105);
+  color: rgba(240, 204, 46, 0.877);
+  text-align: center;
+  height: 600px;
+  width: 80%;
+  max-width: 1024px;
+  border-radius: 10px;
+}
+
+.logos {
+  display: flex;
+  width: 80%;
+  max-width: 1024px;
+  background-color: rgb(41, 16, 105);
+  justify-content: space-around;
+}
+
+.logos-look {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 5px;
+}
+
 @media (max-width:900px) {
-  .box {
+
+  .box,
+  .information,
+  .logos {
     width: 100%;
     flex-direction: column;
-    min-height: 100vh;
     height: auto;
   }
 
-  .left-image { background-position: bottom; }
-  .main { align-items: flex-start; }
+  .left-image {
+    background-position: bottom;
+  }
+
+  .main {
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .arrows {
+    padding: 20px 0;
+    width: 100%;
+    justify-content: center
+  }
+
+  .arrows>.arrow:first-child {
+    display: none;
+  }
+
+  .arrows>.arrow:last-child {
+    display: none;
+  }
+
+  .logos {
+    flex-direction: row;
+  }
+
+  .logos-look {
+    height: 140px;
+    width: 140px;
+  }
 }
 
 @media (max-height: 460px) {
   .left-image {
-    background-image: url('../images/icon.png');
+    background-image: url('../images/iconKD.png');
     background-size: 120px;
     background-repeat: no-repeat;
     background-color: rgb(41, 16, 105);
     min-height: 120px;
-   }
+  }
 }
